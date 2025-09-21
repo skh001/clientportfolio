@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-primary: #0A0A0A; /* gray-950 */
+  --color-secondary: #1A1A1A; /* gray-900 */
+  --color-accent: #00D4FF; /* cyan-400 */
+  
+  /* Background Colors */
+  --color-background: #FAFAFA; /* gray-50 */
+  --color-surface: #F5F5F5; /* gray-100 */
+  
+  /* Text Colors */
+  --color-text-primary: #0A0A0A; /* gray-950 */
+  --color-text-secondary: #666666; /* gray-500 */
+  
+  /* Status Colors */
+  --color-success: #00C851; /* green-500 */
+  --color-warning: #FF8800; /* orange-500 */
+  --color-error: #FF4444; /* red-500 */
+  
+  /* Shadow Values */
+  --shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-elevation: 0 4px 16px rgba(0, 0, 0, 0.12);
+  
+  /* Animation Timing */
+  --timing-fast: 200ms;
+  --timing-normal: 300ms;
+}
+
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  body {
+    @apply bg-background text-text-primary antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-inter;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-surface;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-text-secondary rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary;
+  }
+}
+
+@layer components {
+  /* Button Components */
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 font-semibold transition-all duration-200 hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+  }
+  
+  .btn-accent {
+    @apply bg-accent text-primary px-6 py-3 font-semibold transition-all duration-200 hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+  }
+  
+  .btn-ghost {
+    @apply text-primary border border-primary px-6 py-3 font-semibold transition-all duration-200 hover:bg-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+  }
+  
+  /* Form Components */
+  .form-input {
+    @apply w-full px-4 py-3 border border-gray-300 bg-white text-text-primary placeholder-text-secondary focus:border-accent focus:ring-1 focus:ring-accent focus:outline-none transition-colors duration-200;
+  }
+.form-textarea  {
+    @apply w-full px-4 py-3 border border-gray-300 bg-white text-text-primary placeholder-text-secondary focus:border-accent focus:ring-1 focus:ring-accent focus:outline-none transition-colors duration-200 min-h-[120px];
+  }
+  
+  /* Card Components */
+  .card {
+    @apply bg-white border border-gray-200 transition-all duration-200;
+  }
+  
+  .card-elevated {
+    @apply bg-white shadow-subtle transition-all duration-200 hover:shadow-elevation;
+  }
+  
+  /* Animation Classes */
+  .animate-fade-in {
+    animation: fadeIn var(--timing-normal) ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp var(--timing-normal) ease-out;
+  }
+  
+  .animate-scale-in {
+    animation: scaleIn var(--timing-fast) ease-out;
+  }
+}
+
+@layer utilities {
+  /* Custom Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Text Utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Focus Utilities */
+  .focus-accent {
+    @apply focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+  }
+  
+  /* Hover Utilities */
+  .hover-lift {
+    @apply transition-transform duration-200 hover:-translate-y-1;
+  }
+}

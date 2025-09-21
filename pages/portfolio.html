@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - SKH Portfolio | Interactive Project Showcase</title>
+    <meta name="description" content="Explore SKH's interactive portfolio featuring cutting-edge projects, detailed case studies, and innovative digital solutions that push creative boundaries." />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fskhportfo5237back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+</head>
+<body class="bg-gray-950 text-white overflow-x-hidden">
+    <!-- Floating Navigation -->
+    <nav id="floating-nav" class="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300">
+        <div class="bg-black/20 backdrop-blur-lg border border-white/10 rounded-full px-6 py-3">
+            <div class="flex items-center space-x-8">
+                <a href="homepage.html" class="text-white/70 font-medium text-sm hover:text-accent transition-colors duration-200">Home</a>
+                <a href="about.html" class="text-white/70 font-medium text-sm hover:text-accent transition-colors duration-200">About</a>
+                <a href="portfolio.html" class="text-accent font-semibold text-sm hover:text-white transition-colors duration-200">Portfolio</a>
+                <a href="skills.html" class="text-white/70 font-medium text-sm hover:text-accent transition-colors duration-200">Skills</a>
+                <a href="contact.html" class="text-white/70 font-medium text-sm hover:text-accent transition-colors duration-200">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Particle Background -->
+    <div id="particles" class="fixed inset-0 z-0 pointer-events-none">
+        <div class="absolute inset-0 bg-gradient-to-br from-gray-950 via-gray-900 to-black"></div>
+        <!-- Animated particles -->
+        <div class="particle absolute w-1 h-1 bg-accent rounded-full opacity-60 animate-pulse" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
+        <div class="particle absolute w-1 h-1 bg-cyan-300 rounded-full opacity-40 animate-pulse" style="top: 60%; left: 80%; animation-delay: 1s;"></div>
+        <div class="particle absolute w-2 h-2 bg-accent/30 rounded-full opacity-50 animate-pulse" style="top: 40%; left: 20%; animation-delay: 2s;"></div>
+        <div class="particle absolute w-1 h-1 bg-white/40 rounded-full opacity-60 animate-pulse" style="top: 80%; left: 60%; animation-delay: 3s;"></div>
+        <div class="particle absolute w-1 h-1 bg-accent rounded-full opacity-30 animate-pulse" style="top: 30%; left: 90%; animation-delay: 4s;"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative pt-32 pb-20 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="animate-fade-in">
+                <h1 class="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-accent to-cyan-300 bg-clip-text text-transparent">
+                    Portfolio
+                </h1>
+                <p class="text-xl md:text-2xl text-white/70 max-w-3xl mx-auto leading-relaxed mb-8">
+                    Interactive showcase of cutting-edge projects that transform complex ideas into elegant digital solutions
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Controls -->
+    <section id="filters" class="relative py-8 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <button class="filter-btn active px-6 py-3 bg-accent text-black font-semibold rounded-full transition-all duration-300 hover:bg-accent/90" data-filter="all">
+                    All Projects
+                </button>
+                <button class="filter-btn px-6 py-3 bg-gray-800/50 text-white font-medium rounded-full border border-white/10 transition-all duration-300 hover:bg-accent hover:text-black hover:border-accent" data-filter="web">
+                    Web Applications
+                </button>
+                <button class="filter-btn px-6 py-3 bg-gray-800/50 text-white font-medium rounded-full border border-white/10 transition-all duration-300 hover:bg-accent hover:text-black hover:border-accent" data-filter="mobile">
+                    Mobile Apps
+                </button>
+                <button class="filter-btn px-6 py-3 bg-gray-800/50 text-white font-medium rounded-full border border-white/10 transition-all duration-300 hover:bg-accent hover:text-black hover:border-accent" data-filter="ai">
+                    AI/ML Projects
+                </button>
+                <button class="filter-btn px-6 py-3 bg-gray-800/50 text-white font-medium rounded-full border border-white/10 transition-all duration-300 hover:bg-accent hover:text-black hover:border-accent" data-filter="blockchain">
+                    Blockchain
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section id="projects-grid" class="relative py-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-container">
+                
+                <!-- Project 1: AI Analytics Dashboard -->
+                <div class="project-card group relative bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover-lift transition-all duration-300 hover:border-accent/50" data-category="web ai">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="AI-Powered Analytics Dashboard" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute top-4 right-4">
+                            <button class="preview-btn w-10 h-10 bg-accent/20 backdrop-blur-sm rounded-full flex items-center justify-center text-accent hover:bg-accent hover:text-black transition-all duration-300" data-project="ai-dashboard">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-semibold text-white group-hover:text-accent transition-colors duration-300">
+                                AI Analytics Dashboard
+                            </h3>
+                            <div class="flex space-x-2">
+                                <a href="https://github.com" class="text-white/60 hover:text-accent transition-colors duration-200">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="javascript:void(0)" class="text-white/60 hover:text-accent transition-colors duration-200">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="text-white/60 text-sm mb-4 leading-relaxed">
+                            Revolutionary data visualization platform with real-time AI insights, predictive analytics, and automated reporting capabilities.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full">React</span>
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full">Python</span>
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full">TensorFlow</span>
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full">D3.js</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="text-xs text-white/50">
+                                <span class="text-accent">95%</span> Client Satisfaction
+                            </div>
+                            <button class="case-study-btn text-accent hover:text-white transition-colors duration-200 text-sm font-medium" data-project="ai-dashboard">
+                                View Case Study →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: VR Experience Platform -->
+                <div class="project-card group relative bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover-lift transition-all duration-300 hover:border-accent/50" data-category="web">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Immersive VR Experience Platform" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2017/05/10/19/29/robot-2301646_1280.jpg'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute top-4 right-4">
+                            <button class="preview-btn w-10 h-10 bg-accent/20 backdrop-blur-sm rounded-full flex items-center justify-center text-accent hover:bg-accent hover:text-black transition-all duration-300" data-project="vr-platform">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-semibold text-white group-hover:text-accent transition-colors duration-300">
+                                VR Experience Platform
+                            </h3>
+                            <div class="flex space-x-2">
+                                <a href="https://github.com" class="text-white/60 hover:text-accent transition-colors duration-200">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="javascript:void(0)" class="text-white/60 hover:text-accent transition-colors duration-200">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="text-white/60 text-sm mb-4 leading-relaxed">
+                            Next-generation virtual reality platform enabling seamless cross-platform experiences with advanced haptic feedback.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full">WebXR</span>
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full">Three.js</span>
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full">Unity</span>
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full">C#</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="text-xs text-white/50">
+                                <span class="text-accent">2M+</span> Users Engaged
+                            </div>
+                            <button class="case-study-btn text-accent hover:text-white transition-colors duration-200 text-sm font-medium" data-project="vr-platform">
+                                View Case Study →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Blockchain Identity System -->
+                <div class="project-card group relative bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover-lift transition-all duration-300 hover:border-accent/50" data-category="blockchain">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?q=80&w=2825&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Blockchain-Based Identity System" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute top-4 right-4">
+                            <button class="preview-btn w-10 h-10 bg-accent/20 backdrop-blur-sm rounded-full flex items-center justify-center text-accent hover:bg-accent hover:text-black transition-all duration-300" data-project="blockchain-identity">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-semibold text-white group-hover:text-accent transition-colors duration-300">
+                                Blockchain Identity System
+                            </h3>
+                            <div class="flex space-x-2">
+                                <a href="https://github.com" class="text-white/60 hover:text-accent transition-colors duration-200">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="javascript:void(0)" class="text-white/60 hover:text-accent transition-colors duration-200">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="text-white/60 text-sm mb-4 leading-relaxed">
+                            Decentralized identity management system with advanced cryptographic security protocols and zero-knowledge proofs.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full">Solidity</span>
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full">Web3.js</span>
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full">IPFS</span>
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full">Ethereum</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="text-xs text-white/50">
+                                <span class="text-accent">99.9%</span> Security Score
+                            </div>
+                            <button class="case-study-btn text-accent hover:text-white transition-colors duration-200 text-sm font-medium" data-project="blockchain-identity">
+                                View Case Study →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Mobile Fitness App -->
+                <div class="project-card group relative bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover-lift transition-all duration-300 hover:border-accent/50" data-category="mobile ai">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="AI-Powered Fitness Mobile App" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute top-4 right-4">
+                            <button class="preview-btn w-10 h-10 bg-accent/20 backdrop-blur-sm rounded-full flex items-center justify-center text-accent hover:bg-accent hover:text-black transition-all duration-300" data-project="fitness-app">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-semibold text-white group-hover:text-accent transition-colors duration-300">
+                                AI Fitness Companion
+                            </h3>
+                            <div class="flex space-x-2">
+                                <a href="https://github.com" class="text-white/60 hover:text-accent transition-colors duration-200">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="javascript:void(0)" class="text-white/60 hover:text-accent transition-colors duration-200">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="text-white/60 text-sm mb-4 leading-relaxed">
+                            Intelligent fitness companion with personalized workout plans, real-time form correction, and adaptive training algorithms.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full">React Native</span>
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full">TensorFlow Lite</span>
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full">Firebase</span>
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full">ARKit</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="text-xs text-white/50">
+                                <span class="text-accent">500K+</span> Downloads
+                            </div>
+                            <button class="case-study-btn text-accent hover:text-white transition-colors duration-200 text-sm font-medium" data-project="fitness-app">
+                                View Case Study →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: E-commerce Platform -->
+                <div class="project-card group relative bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover-lift transition-all duration-300 hover:border-accent/50" data-category="web">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.pixabay.com/photo/2017/03/13/17/26/ecommerce-2140603_1280.jpg" alt="Next-Gen E-commerce Platform" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute top-4 right-4">
+                            <button class="preview-btn w-10 h-10 bg-accent/20 backdrop-blur-sm rounded-full flex items-center justify-center text-accent hover:bg-accent hover:text-black transition-all duration-300" data-project="ecommerce-platform">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-semibold text-white group-hover:text-accent transition-colors duration-300">
+                                E-commerce Platform
+                            </h3>
+                            <div class="flex space-x-2">
+                                <a href="https://github.com" class="text-white/60 hover:text-accent transition-colors duration-200">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="javascript:void(0)" class="text-white/60 hover:text-accent transition-colors duration-200">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="text-white/60 text-sm mb-4 leading-relaxed">
+                            Scalable e-commerce solution with advanced inventory management, real-time analytics, and seamless payment integration.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full">Next.js</span>
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full">Node.js</span>
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full">PostgreSQL</span>
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full">Stripe</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="text-xs text-white/50">
+                                <span class="text-accent">$2M+</span> Revenue Generated
+                            </div>
+                            <button class="case-study-btn text-accent hover:text-white transition-colors duration-200 text-sm font-medium" data-project="ecommerce-platform">
+                                View Case Study →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: IoT Dashboard -->
+                <div class="project-card group relative bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover-lift transition-all duration-300 hover:border-accent/50" data-category="web ai">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="IoT Smart Home Dashboard" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.pexels.com/photos/159304/network-cable-ethernet-computer-159304.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                        <div class="absolute top-4 right-4">
+                            <button class="preview-btn w-10 h-10 bg-accent/20 backdrop-blur-sm rounded-full flex items-center justify-center text-accent hover:bg-accent hover:text-black transition-all duration-300" data-project="iot-dashboard">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-semibold text-white group-hover:text-accent transition-colors duration-300">
+                                IoT Smart Dashboard
+                            </h3>
+                            <div class="flex space-x-2">
+                                <a href="https://github.com" class="text-white/60 hover:text-accent transition-colors duration-200">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="javascript:void(0)" class="text-white/60 hover:text-accent transition-colors duration-200">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="text-white/60 text-sm mb-4 leading-relaxed">
+                            Comprehensive IoT management platform with real-time device monitoring, predictive maintenance, and energy optimization.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full">Vue.js</span>
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full">MQTT</span>
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full">InfluxDB</span>
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full">Docker</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="text-xs text-white/50">
+                                <span class="text-accent">10K+</span> Devices Connected
+                            </div>
+                            <button class="case-study-btn text-accent hover:text-white transition-colors duration-200 text-sm font-medium" data-project="iot-dashboard">
+                                View Case Study →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials -->
+    <section id="testimonials" class="relative py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-accent bg-clip-text text-transparent">
+                    Client Success Stories
+                </h2>
+                <p class="text-xl text-white/70 max-w-2xl mx-auto">
+                    Real results from real partnerships that transformed businesses
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sarah Chen" class="w-12 h-12 rounded-full object-cover mr-4" loading="lazy" onerror="this.src='https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div>
+                            <h4 class="text-white font-semibold">Sarah Chen</h4>
+                            <p class="text-white/60 text-sm">CEO, TechVision Inc.</p>
+                        </div>
+                    </div>
+                    <blockquote class="text-white/90 leading-relaxed mb-4">
+                        "SKH transformed our vision into a digital masterpiece that exceeded every expectation. The AI dashboard increased our operational efficiency by 300%."
+                    </blockquote>
+                    <div class="flex items-center">
+                        <div class="flex text-accent mr-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        </div>
+                        <span class="text-white/60 text-sm">5.0</span>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Marcus Rodriguez" class="w-12 h-12 rounded-full object-cover mr-4" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg'; this.onerror=null;" />
+                        <div>
+                            <h4 class="text-white font-semibold">Marcus Rodriguez</h4>
+                            <p class="text-white/60 text-sm">CTO, InnovateLab</p>
+                        </div>
+                    </div>
+                    <blockquote class="text-white/90 leading-relaxed mb-4">
+                        "The blockchain identity system revolutionized our security infrastructure. SKH's technical expertise and innovative approach are unmatched."
+                    </blockquote>
+                    <div class="flex items-center">
+                        <div class="flex text-accent mr-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        </div>
+                        <span class="text-white/60 text-sm">5.0</span>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616c6106db8?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Emily Watson" class="w-12 h-12 rounded-full object-cover mr-4" loading="lazy" onerror="this.src='https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div>
+                            <h4 class="text-white font-semibold">Emily Watson</h4>
+                            <p class="text-white/60 text-sm">Founder, FitTech Solutions</p>
+                        </div>
+                    </div>
+                    <blockquote class="text-white/90 leading-relaxed mb-4">
+                        "The AI fitness app exceeded all expectations. User engagement increased by 400% and we've seen incredible retention rates."
+                    </blockquote>
+                    <div class="flex items-center">
+                        <div class="flex text-accent mr-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        </div>
+                        <span class="text-white/60 text-sm">5.0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section id="cta" class="relative py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl p-12">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-accent bg-clip-text text-transparent">
+                    Ready to Transform Your Vision?
+                </h2>
+                <p class="text-xl text-white/70 mb-8 leading-relaxed">
+                    Let's collaborate to create something extraordinary that pushes the boundaries of what's possible
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="btn-accent rounded-full px-8 py-4 text-lg font-semibold hover-lift">
+                        Start Your Project
+                    </a>
+                    <a href="skills.html" class="btn-ghost rounded-full px-8 py-4 text-lg font-semibold hover-lift border-white/30 text-white hover:bg-white hover:text-black">
+                        Explore Capabilities
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Preview Modal -->
+    <div id="project-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-100 opacity-0 pointer-events-none transition-all duration-300">
+        <div class="flex items-center justify-center min-h-screen p-6">
+            <div class="bg-gradient-to-br from-gray-900 to-gray-800 border border-white/10 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+                <div class="p-8">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 id="modal-title" class="text-2xl font-bold text-white"></h3>
+                        <button id="close-modal" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors duration-200">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="modal-content" class="text-white/80 leading-relaxed">
+                        <!-- Dynamic content will be inserted here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="relative py-12 px-6 border-t border-white/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center">
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="https://github.com" class="text-white/60 hover:text-accent transition-colors duration-200">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com" class="text-white/60 hover:text-accent transition-colors duration-200">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com" class="text-white/60 hover:text-accent transition-colors duration-200">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                        </svg>
+                    </a>
+                </div>
+                <p class="text-white/60 text-sm">
+                    © 2025 SKH Portfolio. All Rights Reserved. Creating tomorrow's digital experiences today.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Floating Navigation Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('floating-nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('scale-95', 'opacity-90');
+            } else {
+                nav.classList.remove('scale-95', 'opacity-90');
+            }
+        });
+
+        // Filter Functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-accent', 'text-black');
+                    b.classList.add('bg-gray-800/50', 'text-white');
+                });
+
+                // Add active class to clicked button
+                btn.classList.add('active', 'bg-accent', 'text-black');
+                btn.classList.remove('bg-gray-800/50', 'text-white');
+
+                const filter = btn.getAttribute('data-filter');
+
+                // Filter projects
+                projectCards.forEach(card => {
+                    const categories = card.getAttribute('data-category').split(' ');
+                    
+                    if (filter === 'all' || categories.includes(filter)) {
+                        card.style.display = 'block';
+                        card.classList.add('animate-fade-in');
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Project Modal Functionality
+        const modal = document.getElementById('project-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalContent = document.getElementById('modal-content');
+        const closeModal = document.getElementById('close-modal');
+        const previewBtns = document.querySelectorAll('.preview-btn, .case-study-btn');
+
+        const projectData = {
+            'ai-dashboard': {
+                title: 'AI-Powered Analytics Dashboard',
+                content: `
+                    <div class="space-y-6">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="AI Dashboard" class="w-full h-64 object-cover rounded-xl">
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="bg-white/5 rounded-xl p-6">
+                                <h4 class="text-accent font-semibold mb-2">Challenge</h4>
+                                <p class="text-sm">Complex data visualization needs with real-time processing requirements and predictive analytics integration.</p>
+                            </div>
+                            <div class="bg-white/5 rounded-xl p-6">
+                                <h4 class="text-accent font-semibold mb-2">Solution</h4>
+                                <p class="text-sm">Custom React dashboard with TensorFlow integration, real-time WebSocket connections, and D3.js visualizations.</p>
+                            </div>
+                            <div class="bg-white/5 rounded-xl p-6">
+                                <h4 class="text-accent font-semibold mb-2">Results</h4>
+                                <p class="text-sm">300% increase in operational efficiency, 95% client satisfaction, and 50% reduction in decision-making time.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-semibold mb-4">Technical Implementation</h4>
+                            <div class="bg-gray-900/50 rounded-xl p-6">
+                                <pre class="text-sm text-accent"><code>// Real-time data processing pipeline
+const DataProcessor = {
+  async processStream(data) {
+    const predictions = await tf.model.predict(data);
+    return this.formatForVisualization(predictions);
+  },
+  
+  formatForVisualization(predictions) {
+    return predictions.map(p => ({
+      timestamp: Date.now(),
+      value: p.dataSync()[0],
+      confidence: p.confidence
+    }));
+  }
+};</code></pre>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-semibold mb-4">Key Features</h4>
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Real-time data streaming</li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Predictive analytics</li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Interactive visualizations</li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Custom alert system</li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Multi-tenant architecture</li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Advanced security protocols</li>
+                            </ul>
+                        </div>
+                    </div>
+                `
+            },
+            'vr-platform': {
+                title: 'Immersive VR Experience Platform',
+                content: `
+                    <div class="space-y-6">
+                        <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="VR Platform" class="w-full h-64 object-cover rounded-xl">
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="bg-white/5 rounded-xl p-6">
+                                <h4 class="text-accent font-semibold mb-2">Challenge</h4>
+                                <p class="text-sm">Creating seamless cross-platform VR experiences with advanced haptic feedback and social interaction capabilities.</p>
+                            </div>
+                            <div class="bg-white/5 rounded-xl p-6">
+                                <h4 class="text-accent font-semibold mb-2">Solution</h4>
+                                <p class="text-sm">WebXR-based platform with Unity integration, real-time multiplayer networking, and advanced physics simulation.</p>
+                            </div>
+                            <div class="bg-white/5 rounded-xl p-6">
+                                <h4 class="text-accent font-semibold mb-2">Results</h4>
+                                <p class="text-sm">2M+ users engaged, 85% user retention rate, and successful deployment across 15+ VR platforms.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-semibold mb-4">Architecture Overview</h4>
+                            <div class="bg-gray-900/50 rounded-xl p-6">
+                                <pre class="text-sm text-accent"><code>// VR Scene Management System
+class VRSceneManager {
+  constructor() {
+    this.scenes = new Map();
+    this.activeUsers = new Set();
+    this.physicsWorld = new CANNON.World();
+  }
+  
+  async loadScene(sceneId, userContext) {
+    const scene = await this.scenes.get(sceneId);
+    return this.initializeUserExperience(scene, userContext);
+  }
+}</code></pre>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-semibold mb-4">Innovation Highlights</h4>
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Cross-platform compatibility</li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Advanced haptic feedback</li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Real-time multiplayer</li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Spatial audio system</li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Gesture recognition</li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Cloud-based rendering</li>
+                            </ul>
+                        </div>
+                    </div>
+                `
+            },
+            'blockchain-identity': {
+                title: 'Blockchain Identity System',
+                content: `
+                    <div class="space-y-6">
+                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?q=80&w=2825&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Blockchain Identity" class="w-full h-64 object-cover rounded-xl">
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="bg-white/5 rounded-xl p-6">
+                                <h4 class="text-accent font-semibold mb-2">Challenge</h4>
+                                <p class="text-sm">Developing a secure, decentralized identity management system with zero-knowledge proofs and cross-chain compatibility.</p>
+                            </div>
+                            <div class="bg-white/5 rounded-xl p-6">
+                                <h4 class="text-accent font-semibold mb-2">Solution</h4>
+                                <p class="text-sm">Ethereum-based smart contracts with IPFS storage, zk-SNARKs implementation, and Web3 integration.</p>
+                            </div>
+                            <div class="bg-white/5 rounded-xl p-6">
+                                <h4 class="text-accent font-semibold mb-2">Results</h4>
+                                <p class="text-sm">99.9% security score, 100K+ verified identities, and successful integration with 25+ dApps.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-semibold mb-4">Smart Contract Architecture</h4>
+                            <div class="bg-gray-900/50 rounded-xl p-6">
+                                <pre class="text-sm text-accent"><code>// Identity Management Contract
+pragma solidity ^0.8.0;
+
+contract IdentityManager {
+    mapping(address => bytes32) private identityHashes;
+    mapping(bytes32 => bool) private verifiedIdentities;
+    
+    function verifyIdentity(bytes32 _proof) external {
+        require(zkVerify(_proof), "Invalid proof");
+        identityHashes[msg.sender] = _proof;
+        verifiedIdentities[_proof] = true;
+    }
+}</code></pre>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-semibold mb-4">Security Features</h4>
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Zero-knowledge proofs</li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Multi-signature wallets</li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Decentralized storage</li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Cross-chain compatibility</li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Biometric integration</li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Audit trail system</li>
+                            </ul>
+                        </div>
+                    </div>
+                `
+            },
+            'fitness-app': {
+                title: 'AI Fitness Companion',
+                content: `
+                    <div class="space-y-6">
+                        <img src="https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Fitness App" class="w-full h-64 object-cover rounded-xl">
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="bg-white/5 rounded-xl p-6">
+                                <h4 class="text-accent font-semibold mb-2">Challenge</h4>
+                                <p class="text-sm">Creating an intelligent fitness companion with real-time form correction and personalized training algorithms.</p>
+                            </div>
+                            <div class="bg-white/5 rounded-xl p-6">
+                                <h4 class="text-accent font-semibold mb-2">Solution</h4>
+                                <p class="text-sm">React Native app with TensorFlow Lite, ARKit integration, and cloud-based machine learning models.</p>
+                            </div>
+                            <div class="bg-white/5 rounded-xl p-6">
+                                <h4 class="text-accent font-semibold mb-2">Results</h4>
+                                <p class="text-sm">500K+ downloads, 4.8 app store rating, and 75% improvement in user workout consistency.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-semibold mb-4">AI Model Implementation</h4>
+                            <div class="bg-gray-900/50 rounded-xl p-6">
+                                <pre class="text-sm text-accent"><code>// Pose Detection and Form Analysis
+class FormAnalyzer {
+  constructor() {
+    this.poseNet = await tf.loadLayersModel('/models/posenet');
+    this.formClassifier = await tf.loadLayersModel('/models/form-classifier');
+  }
+  
+  async analyzeForm(videoFrame) {
+    const poses = await this.poseNet.estimatePoses(videoFrame);
+    return this.formClassifier.predict(poses);
+  }
+}</code></pre>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-semibold mb-4">Core Features</h4>
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Real-time form correction</li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Personalized workout plans</li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>AR exercise guidance</li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Progress tracking</li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Social challenges</li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Nutrition integration</li>
+                            </ul>
+                        </div>
+                    </div>
+                `
+            },
+            'ecommerce-platform': {
+                title: 'Next-Gen E-commerce Platform',
+                content: `
+                    <div class="space-y-6">
+                        <img src="https://images.pixabay.com/photo/2017/03/13/17/26/ecommerce-2140603_1280.jpg" alt="E-commerce Platform" class="w-full h-64 object-cover rounded-xl">
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="bg-white/5 rounded-xl p-6">
+                                <h4 class="text-accent font-semibold mb-2">Challenge</h4>
+                                <p class="text-sm">Building a scalable e-commerce solution with advanced inventory management and real-time analytics.</p>
+                            </div>
+                            <div class="bg-white/5 rounded-xl p-6">
+                                <h4 class="text-accent font-semibold mb-2">Solution</h4>
+                                <p class="text-sm">Next.js frontend with Node.js backend, PostgreSQL database, and Stripe payment integration.</p>
+                            </div>
+                            <div class="bg-white/5 rounded-xl p-6">
+                                <h4 class="text-accent font-semibold mb-2">Results</h4>
+                                <p class="text-sm">$2M+ revenue generated, 99.9% uptime, and 40% increase in conversion rates.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-semibold mb-4">System Architecture</h4>
+                            <div class="bg-gray-900/50 rounded-xl p-6">
+                                <pre class="text-sm text-accent"><code>// Order Processing Pipeline
+class OrderProcessor {
+  async processOrder(orderData) {
+    const validation = await this.validateOrder(orderData);
+    const payment = await this.processPayment(validation);
+    const inventory = await this.updateInventory(payment);
+    return this.fulfillOrder(inventory);
+  }
+}</code></pre>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-semibold mb-4">Platform Features</h4>
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Advanced inventory management</li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Real-time analytics</li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Multi-vendor support</li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>AI-powered recommendations</li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Mobile-first design</li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Global payment processing</li>
+                            </ul>
+                        </div>
+                    </div>
+                `
+            },
+            'iot-dashboard': {
+                title: 'IoT Smart Dashboard',
+                content: `
+                    <div class="space-y-6">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="IoT Dashboard" class="w-full h-64 object-cover rounded-xl">
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="bg-white/5 rounded-xl p-6">
+                                <h4 class="text-accent font-semibold mb-2">Challenge</h4>
+                                <p class="text-sm">Creating a comprehensive IoT management platform with real-time monitoring and predictive maintenance.</p>
+                            </div>
+                            <div class="bg-white/5 rounded-xl p-6">
+                                <h4 class="text-accent font-semibold mb-2">Solution</h4>
+                                <p class="text-sm">Vue.js dashboard with MQTT protocol, InfluxDB time-series database, and Docker containerization.</p>
+                            </div>
+                            <div class="bg-white/5 rounded-xl p-6">
+                                <h4 class="text-accent font-semibold mb-2">Results</h4>
+                                <p class="text-sm">10K+ devices connected, 30% reduction in maintenance costs, and 99.5% system reliability.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-semibold mb-4">Data Processing Pipeline</h4>
+                            <div class="bg-gray-900/50 rounded-xl p-6">
+                                <pre class="text-sm text-accent"><code>// IoT Data Stream Processing
+class IoTDataProcessor {
+  constructor() {
+    this.mqttClient = mqtt.connect('mqtt://broker.hivemq.com');
+    this.influxClient = new InfluxDB.InfluxDB({url: 'http://localhost:8086'});
+  }
+  
+  processDeviceData(deviceId, sensorData) {
+    const processed = this.analyzeSensorData(sensorData);
+    return this.storeTelemetry(deviceId, processed);
+  }
+}</code></pre>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-semibold mb-4">Smart Features</h4>
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Real-time device monitoring</li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Predictive maintenance</li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Energy optimization</li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Automated alerts</li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Historical analytics</li>
+                                <li class="flex items-center"><span class="w-2 h-2 bg-accent rounded-full mr-3"></span>Remote device control</li>
+                            </ul>
+                        </div>
+                    </div>
+                `
+            }
+        };
+
+        previewBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const projectId = btn.getAttribute('data-project');
+                const project = projectData[projectId];
+                
+                if (project) {
+                    modalTitle.textContent = project.title;
+                    modalContent.innerHTML = project.content;
+                    modal.classList.remove('opacity-0', 'pointer-events-none');
+                    modal.classList.add('opacity-100');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            modal.classList.remove('opacity-100');
+            document.body.style.overflow = 'auto';
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.add('opacity-0', 'pointer-events-none');
+                modal.classList.remove('opacity-100');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe sections and project cards
+        document.querySelectorAll('section, .project-card').forEach(element => {
+            observer.observe(element);
+        });
+
+        // Particle animation
+        const particles = document.querySelectorAll('.particle');
+        particles.forEach((particle, index) => {
+            setInterval(() => {
+                const x = Math.random() * window.innerWidth;
+                const y = Math.random() * window.innerHeight;
+                particle.style.left = x + 'px';
+                particle.style.top = y + 'px';
+            }, 3000 + (index * 1000));
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>

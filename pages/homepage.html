@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SKH Portfolio - Creating Tomorrow's Digital Experiences</title>
+    <meta name="description" content="SKH Portfolio - Where creativity meets cutting-edge technology. Transforming complex ideas into elegant digital solutions." />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fskhportfo5237back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+</head>
+<body class="bg-gray-950 text-white overflow-x-hidden">
+    <!-- Floating Navigation -->
+    <nav id="floating-nav" class="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300">
+        <div class="bg-black/20 backdrop-blur-lg border border-white/10 rounded-full px-6 py-3">
+            <div class="flex items-center space-x-8">
+                <a href="homepage.html" class="text-accent font-semibold text-sm hover:text-white transition-colors duration-200">Home</a>
+                <a href="about.html" class="text-white/70 font-medium text-sm hover:text-accent transition-colors duration-200">About</a>
+                <a href="portfolio.html" class="text-white/70 font-medium text-sm hover:text-accent transition-colors duration-200">Portfolio</a>
+                <a href="skills.html" class="text-white/70 font-medium text-sm hover:text-accent transition-colors duration-200">Skills</a>
+                <a href="contact.html" class="text-white/70 font-medium text-sm hover:text-accent transition-colors duration-200">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Particle Background -->
+    <div id="particles" class="fixed inset-0 z-0 pointer-events-none">
+        <div class="absolute inset-0 bg-gradient-to-br from-gray-950 via-gray-900 to-black"></div>
+        <!-- Animated particles -->
+        <div class="particle absolute w-1 h-1 bg-accent rounded-full opacity-60 animate-pulse" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
+        <div class="particle absolute w-1 h-1 bg-cyan-300 rounded-full opacity-40 animate-pulse" style="top: 60%; left: 80%; animation-delay: 1s;"></div>
+        <div class="particle absolute w-2 h-2 bg-accent/30 rounded-full opacity-50 animate-pulse" style="top: 40%; left: 20%; animation-delay: 2s;"></div>
+        <div class="particle absolute w-1 h-1 bg-white/40 rounded-full opacity-60 animate-pulse" style="top: 80%; left: 60%; animation-delay: 3s;"></div>
+        <div class="particle absolute w-1 h-1 bg-accent rounded-full opacity-30 animate-pulse" style="top: 30%; left: 90%; animation-delay: 4s;"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Video Background Placeholder -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-br from-gray-950/90 via-gray-900/80 to-black/90 z-10"></div>
+            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?q=80&w=2825&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Digital Technology Background" class="w-full h-full object-cover opacity-30" loading="lazy" onerror="this.src='https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+        </div>
+
+        <div class="relative z-20 text-center max-w-6xl mx-auto px-6">
+            <!-- Animated Logo/Brand -->
+            <div class="mb-8 animate-fade-in">
+                <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-accent to-cyan-300 rounded-full mb-6 animate-pulse-subtle">
+                    <svg class="w-10 h-10 text-black" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
+                        <path d="M8 12l2 2 4-4" stroke="currentColor" stroke-width="2" fill="none"/>
+                    </svg>
+                </div>
+                <h1 class="text-6xl md:text-8xl font-bold mb-4 bg-gradient-to-r from-white via-accent to-cyan-300 bg-clip-text text-transparent animate-slide-up">
+                    SKH
+                </h1>
+            </div>
+
+            <!-- Kinetic Typography -->
+            <div class="mb-8 animate-slide-up" style="animation-delay: 0.2s;">
+                <h2 class="text-2xl md:text-4xl font-semibold mb-4 text-white/90">
+                    Creating Tomorrow's
+                    <span class="text-accent animate-pulse">Digital Experiences</span>
+                </h2>
+                <p class="text-lg md:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
+                    Where creativity meets cutting-edge technology. Transforming complex ideas into elegant digital solutions that push boundaries and inspire possibilities.
+                </p>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center animate-scale-in" style="animation-delay: 0.4s;">
+                <a href="portfolio.html" class="btn-accent rounded-full px-8 py-4 text-lg font-semibold hover-lift">
+                    Explore Projects
+                </a>
+                <a href="contact.html" class="btn-ghost rounded-full px-8 py-4 text-lg font-semibold hover-lift border-white/30 text-white hover:bg-white hover:text-black">
+                    Start Collaboration
+                </a>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <div class="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+                    <div class="w-1 h-3 bg-accent rounded-full mt-2 animate-pulse"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Access Tiles -->
+    <section id="quick-access" class="relative py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-accent bg-clip-text text-transparent">
+                    Explore My Universe
+                </h2>
+                <p class="text-xl text-white/70 max-w-2xl mx-auto">
+                    Discover different facets of my creative journey and technical expertise
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- About Tile -->
+                <a href="about.html" class="group relative bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover-lift transition-all duration-300 hover:border-accent/50">
+                    <div class="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent/30 transition-colors duration-300">
+                            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 text-white group-hover:text-accent transition-colors duration-300">About</h3>
+                        <p class="text-white/60 text-sm leading-relaxed">Discover my journey, philosophy, and creative process</p>
+                    </div>
+                </a>
+
+                <!-- Portfolio Tile -->
+                <a href="portfolio.html" class="group relative bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover-lift transition-all duration-300 hover:border-accent/50">
+                    <div class="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent/30 transition-colors duration-300">
+                            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 text-white group-hover:text-accent transition-colors duration-300">Portfolio</h3>
+                        <p class="text-white/60 text-sm leading-relaxed">Interactive showcase of cutting-edge projects</p>
+                    </div>
+                </a>
+
+                <!-- Skills Tile -->
+                <a href="skills.html" class="group relative bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover-lift transition-all duration-300 hover:border-accent/50">
+                    <div class="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent/30 transition-colors duration-300">
+                            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 text-white group-hover:text-accent transition-colors duration-300">Skills</h3>
+                        <p class="text-white/60 text-sm leading-relaxed">Dynamic capability demonstrations and tech playground</p>
+                    </div>
+                </a>
+
+                <!-- Contact Tile -->
+                <a href="contact.html" class="group relative bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover-lift transition-all duration-300 hover:border-accent/50">
+                    <div class="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent/30 transition-colors duration-300">
+                            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 text-white group-hover:text-accent transition-colors duration-300">Contact</h3>
+                        <p class="text-white/60 text-sm leading-relaxed">Multi-channel communication and collaboration hub</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Carousel -->
+    <section id="featured-projects" class="relative py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-accent bg-clip-text text-transparent">
+                    Featured Projects
+                </h2>
+                <p class="text-xl text-white/70 max-w-2xl mx-auto">
+                    Breakthrough digital experiences that define the future
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="group relative bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover-lift transition-all duration-300 hover:border-accent/50">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="AI-Powered Analytics Dashboard" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-white group-hover:text-accent transition-colors duration-300">
+                            AI-Powered Analytics Dashboard
+                        </h3>
+                        <p class="text-white/60 text-sm mb-4 leading-relaxed">
+                            Revolutionary data visualization platform with real-time AI insights and predictive analytics.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full">React</span>
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full">AI/ML</span>
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full">D3.js</span>
+                        </div>
+                        <a href="portfolio.html" class="text-accent hover:text-white transition-colors duration-200 text-sm font-medium">
+                            View Case Study →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group relative bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover-lift transition-all duration-300 hover:border-accent/50">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Immersive VR Experience Platform" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2017/05/10/19/29/robot-2301646_1280.jpg'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-white group-hover:text-accent transition-colors duration-300">
+                            Immersive VR Experience Platform
+                        </h3>
+                        <p class="text-white/60 text-sm mb-4 leading-relaxed">
+                            Next-generation virtual reality platform enabling seamless cross-platform experiences.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full">WebXR</span>
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full">Three.js</span>
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full">Unity</span>
+                        </div>
+                        <a href="portfolio.html" class="text-accent hover:text-white transition-colors duration-200 text-sm font-medium">
+                            View Case Study →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="group relative bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover-lift transition-all duration-300 hover:border-accent/50">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?q=80&w=2825&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Blockchain-Based Identity System" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.src='https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-white group-hover:text-accent transition-colors duration-300">
+                            Blockchain Identity System
+                        </h3>
+                        <p class="text-white/60 text-sm mb-4 leading-relaxed">
+                            Decentralized identity management system with advanced cryptographic security protocols.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full">Blockchain</span>
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full">Solidity</span>
+                            <span class="px-3 py-1 bg-accent/20 text-accent text-xs rounded-full">Web3</span>
+                        </div>
+                        <a href="portfolio.html" class="text-accent hover:text-white transition-colors duration-200 text-sm font-medium">
+                            View Case Study →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Metrics -->
+    <section id="metrics" class="relative py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-accent mb-2" data-counter="50">0</div>
+                    <p class="text-white/70 text-sm">Projects Completed</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-accent mb-2" data-counter="25">0</div>
+                    <p class="text-white/70 text-sm">Happy Clients</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-accent mb-2" data-counter="5">0</div>
+                    <p class="text-white/70 text-sm">Years Experience</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold text-accent mb-2" data-counter="15">0</div>
+                    <p class="text-white/70 text-sm">Awards Won</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="relative py-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-accent bg-clip-text text-transparent">
+                    Client Testimonials
+                </h2>
+            </div>
+
+            <div class="relative">
+                <div class="bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 md:p-12">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gradient-to-br from-accent to-cyan-300 rounded-full mx-auto mb-6 flex items-center justify-center">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Client Avatar" class="w-full h-full object-cover rounded-full" loading="lazy" onerror="this.src='https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        </div>
+                        <blockquote class="text-xl md:text-2xl text-white/90 mb-6 leading-relaxed">
+                            "SKH transformed our vision into a digital masterpiece that exceeded every expectation. The attention to detail and innovative approach is unmatched."
+                        </blockquote>
+                        <div class="text-accent font-semibold">Sarah Chen</div>
+                        <div class="text-white/60 text-sm">CEO, TechVision Inc.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative py-12 px-6 border-t border-white/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center">
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="https://github.com" class="text-white/60 hover:text-accent transition-colors duration-200">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com" class="text-white/60 hover:text-accent transition-colors duration-200">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com" class="text-white/60 hover:text-accent transition-colors duration-200">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                        </svg>
+                    </a>
+                </div>
+                <p class="text-white/60 text-sm">
+                    © 2025 SKH Portfolio. All Rights Reserved. Creating tomorrow's digital experiences today.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Floating Navigation Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('floating-nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('scale-95', 'opacity-90');
+            } else {
+                nav.classList.remove('scale-95', 'opacity-90');
+            }
+        });
+
+        // Counter Animation
+        const counters = document.querySelectorAll('[data-counter]');
+        const animateCounters = () => {
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-counter'));
+                const count = parseInt(counter.innerText);
+                const increment = target / 100;
+                
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(() => animateCounters(), 20);
+                } else {
+                    counter.innerText = target;
+                }
+            });
+        };
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (entry.target.id === 'metrics') {
+                        animateCounters();
+                    }
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Particle animation
+        const particles = document.querySelectorAll('.particle');
+        particles.forEach((particle, index) => {
+            setInterval(() => {
+                const x = Math.random() * window.innerWidth;
+                const y = Math.random() * window.innerHeight;
+                particle.style.left = x + 'px';
+                particle.style.top = y + 'px';
+            }, 3000 + (index * 1000));
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>
